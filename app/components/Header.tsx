@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-export default function Header() {
+export default function Header({ locale, dict }) {
     const headerRef = useRef<HTMLDivElement>(null);
     const [scrolled, setScrolled] = useState(false);
     const [headerHeight, setHeaderHeight] = useState(0);
@@ -60,7 +60,12 @@ export default function Header() {
                         <Link href='/'>director</Link>
                     </li>
                     <li className={`${pathname === '/producer' ? 'font-bold underline' : ''}`}><Link href='/producer'>producer</Link></li>
-                    <li  className={`${pathname === '/about' ? 'font-bold underline' : ''}`}><Link href='/about'>about</Link></li>
+                    <li  className={`${pathname === '/about' ? 'font-bold underline' : ''}`}><Link href={`/${locale}/about`}>{dict.about}</Link></li>
+                    <li className="ml-auto flex gap-2">
+                        <Link href="/en">{dict.en}</Link>
+                        <Link href="/es">{dict.es}</Link>
+                    </li>
+
                 </ul>
                 </nav>
             </div>

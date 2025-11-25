@@ -1,14 +1,18 @@
 import { projects } from './director/project-data';
 import Link from 'next/link';
-import { PageBackground } from "./types/PageBackground";
-import Page from './components/Page';
+import { PageBackground } from "../types/PageBackground";
+import Page from '../components/Page';
+import { getDictionary } from "@/lib/getDictionary";
 
 export const background: PageBackground = {
   type: "image",
   src: "/Fondo_WAQB.jpg",
 };
 
-export default function Home() {
+
+export default function Home({ params }) {
+  const dict = getDictionary(params.locale);
+
   return (
     <>
 
@@ -41,7 +45,11 @@ export default function Home() {
       </div>
     </Page>
     <div className='flex justify-center px-10'>
-      <h1> EL RESTO DE AQUI PA ABAJO</h1>        
+      <h1> EL RESTO DE AQUI PA ABAJO</h1>  
+      <section>
+        <h1 className="text-3xl font-bold">{dict.home.title}</h1>
+        <p className="mt-4 text-lg">{dict.home.description}</p>
+      </section>      
     </div>
     </>
   );

@@ -1,4 +1,4 @@
-import { Project } from '../director/project-data';
+import { Project } from '../[locale]/director/project-data';
 
 interface FilmProjectProps {
     project: Project;
