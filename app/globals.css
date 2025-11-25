@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-rubik);
+  --font-mono: var(--font-rubik-mono);  
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-rubik), sans-serif;
+}
+
+@layer base {
+  h1 {
+    @apply text-xl font-mono;
+  }
+
+  h2{
+    @apply text-base font-mono underline;
+  }
+  
+  p {
+    @apply text-base font-sans leading-7;
+  }
+}
