@@ -10,8 +10,10 @@ export interface Project {
     logline: string;
     crew: Array<{ role: string, name: string }>;
     cast: Array<{ role: string, name: string }>;
-    festivals?: string[];
+    festivals?: Array<{ festival: string, highlight?: string, country?: string }>;
     mainImage: string;
+    mainImageDesktop?: string;
+    mainImageMobile?: string;
     poster?: string;
     stills?: string[];
     linkToTrailer?: string;
@@ -37,7 +39,10 @@ export const projects : Project[] = [
             { role: "Kiki", name: "Glenna Brucken"},
             { role: "Gabriel", name: "Attilio Rigotti"}
         ],
-        festivals: ["MiFestival International Film Festival", "Otro Film Festival"],
+        festivals: [
+            {festival: "MiFestival International Film Festival", country: "USA"}, 
+            {festival: "TuFestival International Film Festival", highlight: "World Premiere", country: "Chile"},
+        ],
         mainImage: "/Fondo_WAQB.jpg",
         poster: "",
         stills: ["/534_Babysteps.png", "/533_Babysteps.png"],
@@ -62,7 +67,10 @@ export const projects : Project[] = [
             { role: "Kiki", name: "Glenna Brucken"},
             { role: "Gabriel", name: "Attilio Rigotti"}
         ],
-        festivals: ["MiFestival International Film Festival", "Otro Film Festival"],
+        festivals: [
+            {festival: "MiFestival International Film Festival", highlight: "Premio al Mejor Corto", country: "USA"}, 
+            {festival: "TuFestival International Film Festival", highlight: "World Premiere", country: "Chile"},
+        ],
         mainImage: "",
         poster: "",
         stills: ["/534_Babysteps.png", "/533_Babysteps.png"],

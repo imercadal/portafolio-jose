@@ -1,48 +1,36 @@
-import { projects } from './director/project-data';
-import Link from 'next/link';
 import { PageBackground } from "./types/PageBackground";
-import Page from './components/Page';
+import Image from "next/image";
 
 export const background: PageBackground = {
   type: "image",
   src: "/Fondo_WAQB.jpg",
 };
 
-export default function Home() {
+export default function UnderConstruction() {
   return (
     <>
 
-    <Page background={background}>
-      <div className="relative min-h-screen">
-        <div
-          className="
-            absolute inset-0 
-            -z-10
-            bg-cover bg-center bg-no-repeat
-          "
-          style={{
-            backgroundImage: "url('/Fondo_WAQB.jpg')",
-          }}
-        />
-        <div 
-          className="flex min-h-dvh items-end justify-start"
-        >
-          <div className="px-10 pb-10 min-w-full"
-          >
-            <ul className="w-1/7">
-            {projects.map((project) => (
-              <li key={project.id}>
-                <Link href={`/director/${project.slug}`}>{project.title}</Link>
-              </li>
-            ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </Page>
-    <div className='flex justify-center px-10'>
-      <h1> EL RESTO DE AQUI PA ABAJO</h1>        
-    </div>
+          <div className="relative min-h-screen">
+            <div
+              className="
+                absolute inset-0 
+                -z-10
+                bg-cover bg-center bg-no-repeat
+              "
+              style={{
+                backgroundImage: "url('/Fondo_WAQB.jpg')",
+              }}
+            />
+                <div className="flex justify-start items-center p-20 h-screen">
+                    <Image
+                        src="/Logo_JMV.svg"
+                        width={117}
+                        height={65}
+                        alt="Logo"
+                    />
+                    <p className="pl-10 italic">website under construction</p>
+                </div>
+            </div>
     </>
-  );
-};
+)
+}

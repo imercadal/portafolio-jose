@@ -34,7 +34,7 @@ const navigation = [
                 ))}
             </div>
             <p className="mt-2 text-center text-xs/6 text-dark md:order-1 md:mt-0">
-                &copy; 2025 - Designed by José Manuel Vélez / Developed by Irene Mercadal 
+                &copy; 2026 - Designed by José Manuel Vélez / Developed by Irene Mercadal 
             </p>
         </div>
     </footer>
