@@ -1,10 +1,4 @@
-import { PageBackground } from "./types/PageBackground";
 import Image from "next/image";
-
-export const background: PageBackground = {
-  type: "image",
-  src: "/Fondo_WAQB.jpg",
-};
 
 export default function UnderConstruction() {
   return (
@@ -21,7 +15,7 @@ export default function UnderConstruction() {
                 backgroundImage: "url('/Fondo_WAQB.jpg')",
               }}
             />
-                <div className="flex justify-start items-center p-20 h-screen">
+                <div className="flex justify-start items-center p-8 md:p-20 h-screen">
                     <Image
                         src="/Logo_JMV.svg"
                         width={117}

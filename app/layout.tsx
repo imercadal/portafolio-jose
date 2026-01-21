@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik, Rubik_Mono_One } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
-import MobileMenu from "./components/MobileMenu";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -20,15 +18,16 @@ export const metadata: Metadata = {
   description: "Director de cine",
 };
 
-export default function RootLayout({ children }){
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}){
   
   return (
     <html lang="en">
       <body className={`${rubik.variable} ${rubikMono.variable} antialiased flex flex-col min-h-dvh`}>
-
-
           <main className="flex-1">{children}</main>
-          <Footer />
       </body>
     </html>
   );
