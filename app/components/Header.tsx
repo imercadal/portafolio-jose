@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -47,7 +48,12 @@ export default function Header() {
         >
             <div className="mx-auto p-10 flex items-center justify-between">
                 <Link href='/'>
-                    <h1 className="font-bold text-lg">JOSÉ<br/>MANUEL<br/>VÉLEZ</h1>
+                    <Image
+                        src="/Logo_JMV.svg"
+                        width={117}
+                        height={65}
+                        alt="Logo"
+                    />
                 </Link>
                 <nav>
                 <ul>
@@ -67,3 +73,38 @@ export default function Header() {
         </header>
     )
 };
+
+/**
+ * 
+ * 
+ * import Image from "next/image";
+ 
+ export default function UnderConstruction() {
+   return (
+     <>
+ 
+           <div className="relative min-h-screen">
+             <div
+               className="
+                 absolute inset-0 
+                 -z-10
+                 bg-cover bg-center bg-no-repeat
+               "
+               style={{
+                 backgroundImage: "url('/Fondo_WAQB.jpg')",
+               }}
+             />
+                 <div className="flex justify-start items-center p-8 md:p-20 h-screen">
+                     <Image
+                         src="/Logo_JMV.svg"
+                         width={117}
+                         height={65}
+                         alt="Logo"
+                     />
+                     <p className="pl-10 italic">website under construction</p>
+                 </div>
+             </div>
+     </>
+ )
+ }
+ */
