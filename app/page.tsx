@@ -1,6 +1,6 @@
 import { projects } from './director/project-data';
 import Link from 'next/link';
-import { PageBackground } from "./types/PageBackground";
+import { PageBackground } from "./lib/types/PageBackground";
 import Page from './components/Page';
 
 export const background: PageBackground = {

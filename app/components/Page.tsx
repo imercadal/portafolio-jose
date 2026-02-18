@@ -1,7 +1,7 @@
 "use client";
 
 import BackgroundWrapper from "./BackgroundWrapper";
-import { PageBackground } from "../types/PageBackground";
+import { PageBackground } from "../lib/types/PageBackground";
 
 export default function Page({
   background,

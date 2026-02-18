@@ -1,7 +1,7 @@
 import { projects, Project  } from '../project-data';
 import NotFoundPage from '@/app/not-found';
 import ProjectDetails from '../../components/project-details';
-import { PageBackground } from "../../types/PageBackground";
+import { PageBackground } from "../../lib/types/PageBackground";
 import Page from '../../components/Page';
 
 type Params = { slug: string };
