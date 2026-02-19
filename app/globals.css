@@ -17,6 +17,14 @@ body {
   font-family: var(--font-rubik), sans-serif;
 }
 
+@utility body-text {
+  font-family: var(--font-rubik);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 23px;
+}
+
 @layer base {
   h1 {
     @apply text-xl font-mono;

@@ -10,39 +10,23 @@ export const background: PageBackground = {
 
 export default function Home() {
   return (
-    <>
-
     <Page background={background}>
-      <div className="relative min-h-screen">
-        <div
-          className="
-            absolute inset-0 
-            -z-10
-            bg-cover bg-center bg-no-repeat
-          "
-          style={{
-            backgroundImage: "url('/Fondo_WAQB.jpg')",
-          }}
-        />
-        <div 
-          className="flex min-h-dvh items-end justify-start"
-        >
-          <div className="px-10 pb-10 min-w-full"
-          >
-            <ul className="w-1/7">
+      <div className="flex min-h-dvh items-end justify-start">
+        <nav aria-label="Projects" className="px-10 pb-10 min-w-full">
+          <ul>
             {projects.map((project) => (
               <li key={project.id}>
-                <Link href={`/director/${project.slug}`}>{project.title}</Link>
+                <Link
+                  href={`/director/${project.slug}`}
+                  className="block text-[15px] font-medium leading-[30px] lowercase text-white/50 hover:text-white transition-colors"
+                >
+                  {project.title}
+                </Link>
               </li>
             ))}
-            </ul>
-          </div>
-        </div>
+          </ul>
+        </nav>
       </div>
     </Page>
-    <div className='flex justify-center px-10'>
-      <h1> EL RESTO DE AQUI PA ABAJO</h1>        
-    </div>
-    </>
   );
 };
